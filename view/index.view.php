@@ -11,11 +11,11 @@
 
 <form method="post">
     <label for="username">username:</label>
-    <input type="text" id="username" name="dbusername"><br>
+    <input type="text" id="username" name="dbusername" <?value="$data['id']"?><br>
     <label for="email">email:</label>
-    <input type="email" name="email" id="email"><br>
+    <input type="email" name="email" id="email" <?value="$data['email']"?><br>
     <label for="dbpassword">password:</label>
-    <input type="password" name="dbpassword" id="dbpassword">
+    <input type="password" name="dbpassword" id="dbpassword" <?value="$data['dbpassword']"?>
     <input type="submit">
 </form>
 
