@@ -6,7 +6,6 @@ class usermodel{
     public function __construct($conn){
         $this->conn = $conn;
     }
-    public function createUser($dbusername, $email, $dbpassword){
 
 
 
@@ -21,19 +20,6 @@ class usermodel{
             $sql = "update users set username = $dbusername, email = $email, password = $dbpassword where id = $id";
         }
         }
-    }
-
-
-
-    public function delete($id){
-        global $conn;
-        try{
-            $sql = "DELETE FROM user WHERE id = :id";
-            $conn->excec($sql);
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-
     }
 }
 
